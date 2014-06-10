@@ -1,9 +1,9 @@
-<?php
+﻿<?php
 /**
  * Plugin Name: GMO Ads Master
  * Plugin URI:  
  * Description: GMO Ads Master is the ad banner plugin which enables you to place ad contents to the desired locations such as inside article, sidebar and footer. In addition to that, using this plugin let you setup Google Analytics tracking code and sitemap tool settings, and sitemap can be easily generated without playing with PHP files.
- * Version:     1.0
+ * Version:     1.1
  * Author:      WP Shop byGMO
  * Author URI:  http://www.wpshop.com
  * License:     GPLv2
