@@ -56,6 +56,7 @@ function gmoadsmaster_delete_option($option){
     }
 }
 
+$plugin_file_url = plugins_url() . '/';
 
 $gmoadsmaster = new GMO_Ads_Master();
 $gmoadsmaster->register();
@@ -185,7 +186,7 @@ public function wp_enqueue_scripts()
 {
     wp_enqueue_style(
         'gmo-ads-master-style',
-        plugins_url('css/gmo-ads-master.min.css', __FILE__),
+        plugins_url('css/gmo-ads-master.css', __FILE__),
         array(),
         $this->version,
         'all'
@@ -261,18 +262,20 @@ public function admin_menu()
 public function options_page()
 {
 ?>
+
 <div id="gmoadsmaster" class="wrap">
+<h2>GMO Ads Master</h2>
+<div id="gmoplugLeft">
 <form method="post" action="<?php esc_attr($_SERVER['REQUEST_URI']); ?>">
 <?php wp_nonce_field('gmoadsmaster', 'gmoadsmaster'); ?>
 
-<h2>GMO Ads Master</h2>
 
 <h3>Stats Settings</h3>
 
 <table class="form-table">
 <tbody>
     <tr>
-        <th><?php _e('Your sitemap URL.', 'gmoadsmaster'); ?></th>
+        <th><span><?php _e('Your sitemap URL.', 'gmoadsmaster'); ?></span></th>
         <td>
 <?php
     if ( get_option('permalink_structure') ) {
@@ -286,11 +289,11 @@ public function options_page()
         </td>
     </tr>
     <tr>
-        <th><?php _e('Verification', 'gmoadsmaster'); ?></th>
+        <th><span><?php _e('Verification', 'gmoadsmaster'); ?></span></th>
         <td><input type="text" name="gmoadsmaster_verification" value="<?php echo esc_attr($this->get_option('gmoadsmaster_verification')); ?>" style="width:100%;"><br /><?php _e('Enter your meta key "content" value to verify your blog with <a href="https://www.google.com/webmasters/tools/home?hl=ja">Google Webmaster Tools</a>.', 'gmoadsmaster'); ?></td>
     </tr>
     <tr>
-        <th><?php _e('Google Analytics Code', 'gmoadsmaster'); ?></th>
+        <th><span><?php _e('Google Analytics Code', 'gmoadsmaster'); ?></span></th>
         <td><textarea name="gmoadsmaster_analytics" style="width:100%;height:10em;"><?php echo esc_textarea($this->get_option('gmoadsmaster_analytics')); ?></textarea></td>
     </tr>
 </tbody>
@@ -309,7 +312,7 @@ public function options_page()
             $ads[$i]['html'] = '';
         }
     ?>
-    <div class="gmoadsmaster-adcode" style="width: <?php echo floor(100/$this->get_num_ads()); ?>%">
+    <div class="gmoadsmaster-adcode">
         <div class="gmoadsmaster-adcode-wrap">
             <div class="gmoadsmaster-adcode-title">
                 <h4><?php _e('Advertising Code', 'gmoadsmaster'); ?> (<?php echo $i + 1; ?>)</h4>
@@ -328,6 +331,32 @@ public function options_page()
 <p><input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e("Save Changes", "gmoadsmaster"); ?>"></p>
 
 </form>
+</div><!-- #gmoplugLeft -->
+<?php $plugin_file_url = plugins_url() . '/'; ?>
+<div id="gmoplugRight">
+<h3>WordPress Themes</h3>
+<ul>
+<li><a href="https://wordpress.org/themes/kotenhanagara" target="_blank">Kotehanagara</a></li>
+<li><a href="https://wordpress.org/themes/madeini" target="_blank">Madeini</a></li>
+<li><a href="https://wordpress.org/themes/azabu-juban" target="_blank">Azabu Juban</a></li>
+</ul>
+<a href="http://wpshop.com/themes?=vn_wps_adsmaster" target="_blank"><img src="<?php echo ($plugin_file_url.'gmo-ads-master/images/'.'wpshop_bnr_themes.png'); ?>" alt="WPShop by GMO WordPress Themes for Everyone!"></a>
+<ul><li class="bnrlink"><a href="http://wpshop.com/themes?=wps_adsmaster" target="_blank">Visit WP Shop Themes</a></li></ul>
+<h3>WordPress Plugins</h3>
+<ul>
+<li><a href="http://wordpress.org/plugins/gmo-showtime/" target="_blank">GMO Showtime</a></li>
+<li><a href="http://wordpress.org/plugins/gmo-font-agent/" target="_blank">GMO Font Agent</a></li>
+<li><a href="http://wordpress.org/plugins/gmo-share-connection/" target="_blank">GMO Share Connection</a></li>
+<li><a href="http://wordpress.org/plugins/gmo-ads-master/" target="_blank">GMO Ads Master</a></li>
+<li><a href="http://wordpress.org/plugins/gmo-page-transitions/" target="_blank">GMO Page Trasitions</a></li>
+<li><a href="http://wordpress.org/plugins/gmo-go-to-top/" target="_blank">GMO Go to Top</a></li>
+</ul>
+<a href="http://wpshop.com/plugins?=vn_wps_adsmaster" target="_blank"><img src="<?php echo ($plugin_file_url.'gmo-ads-master/images/'.'wpshop_bnr_plugins.png'); ?>" alt="WPShop by GMO WordPress Plugins for Everyone!"></a>
+<ul><li class="bnrlink"><a href="http://wpshop.com/plugins?=wps_adsmaster" target="_blank">Visit WP Shop Plugins</a></li></ul>
+<h3>Contact Us</h3>
+<a href="http://support.wpshop.com/?page_id=15" target="_blank"><img src="<?php echo ($plugin_file_url.'gmo-ads-master/images/'.'wpshop_logo.png'); ?>" alt="WPShop by GMO"></a>
+</div><!-- #gmoplugRight -->
+
 </div><!-- #gmoadsmaster -->
 <?php
 }
