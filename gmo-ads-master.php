@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Plugin Name: GMO Ads Master
  * Plugin URI:  
@@ -410,5 +410,4 @@ private function filters($value)
 }
 
 } // end TestPlugin
-
 // EOF
