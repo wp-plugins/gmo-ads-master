@@ -3,16 +3,16 @@
  * Plugin Name: GMO Ads Master
  * Plugin URI:  
  * Description: GMO Ads Master is the ad banner plugin which enables you to place ad contents to the desired locations such as inside article, sidebar and footer. In addition to that, using this plugin let you setup Google Analytics tracking code and sitemap tool settings, and sitemap can be easily generated without playing with PHP files.
- * Version:     1.1
- * Author:      WP Shop byGMO
- * Author URI:  http://www.wpshop.com
+ * Version:     1.2
+ * Author:      GMO WP Cloud
+ * Author URI:  https://www.wpcloud.jp/en/
  * License:     GPLv2
  * Text Domain: gmoadsmaster
  * Domain Path: /languages
  */
 
 /**
- * Copyright (c) 2014 WP Shop byGMO (http://www.wpshop.com)
+ * Copyright (c) 2015 GMO WP Cloud (https://www.wpcloud.jp/en/)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2 or, at
@@ -334,28 +334,17 @@ public function options_page()
 </div><!-- #gmoplugLeft -->
 <?php $plugin_file_url = plugins_url() . '/'; ?>
 <div id="gmoplugRight">
+<p class="title">Recommended</p>
+<div>
 <h3>WordPress Themes</h3>
-<ul>
-<li><a href="https://wordpress.org/themes/kotenhanagara" target="_blank">Kotehanagara</a></li>
-<li><a href="https://wordpress.org/themes/madeini" target="_blank">Madeini</a></li>
-<li><a href="https://wordpress.org/themes/azabu-juban" target="_blank">Azabu Juban</a></li>
-<li><a href="http://wordpress.org/themes/de-naani" target="_blank">de naani</a></li>
-</ul>
-<a href="http://wpshop.com/themes?=vn_wps_adsmaster" target="_blank"><img src="<?php echo ($plugin_file_url.'gmo-ads-master/images/'.'wpshop_bnr_themes.png'); ?>" alt="WPShop by GMO WordPress Themes for Everyone!"></a>
-<ul><li class="bnrlink"><a href="http://wpshop.com/themes?=wps_adsmaster" target="_blank">Visit WP Shop Themes</a></li></ul>
+<a href="https://www.wpcloud.jp/en/themes/?banner_id=plugins" target="_blank"><img src="<?php echo ($plugin_file_url.'gmo-ads-master/images/'.'wpcloud_bnr_themes.png'); ?>" alt="WordPress Themes for Everyone"></a>
+<p>Browse our recommended theme collection on GMO WP Cloud website.</p>
 <h3>WordPress Plugins</h3>
-<ul>
-<li><a href="http://wordpress.org/plugins/gmo-showtime/" target="_blank">GMO Showtime</a></li>
-<li><a href="http://wordpress.org/plugins/gmo-font-agent/" target="_blank">GMO Font Agent</a></li>
-<li><a href="http://wordpress.org/plugins/gmo-share-connection/" target="_blank">GMO Share Connection</a></li>
-<li><a href="http://wordpress.org/plugins/gmo-ads-master/" target="_blank">GMO Ads Master</a></li>
-<li><a href="http://wordpress.org/plugins/gmo-page-transitions/" target="_blank">GMO Page Trasitions</a></li>
-<li><a href="http://wordpress.org/plugins/gmo-go-to-top/" target="_blank">GMO Go to Top</a></li>
-</ul>
-<a href="http://wpshop.com/plugins?=vn_wps_adsmaster" target="_blank"><img src="<?php echo ($plugin_file_url.'gmo-ads-master/images/'.'wpshop_bnr_plugins.png'); ?>" alt="WPShop by GMO WordPress Plugins for Everyone!"></a>
-<ul><li class="bnrlink"><a href="http://wpshop.com/plugins?=wps_adsmaster" target="_blank">Visit WP Shop Plugins</a></li></ul>
-<h3>Contact Us</h3>
-<a href="http://support.wpshop.com/?page_id=15" target="_blank"><img src="<?php echo ($plugin_file_url.'gmo-ads-master/images/'.'wpshop_logo.png'); ?>" alt="WPShop by GMO"></a>
+<a href="https://www.wpcloud.jp/en/themes/?banner_id=plugins#plugins" target="_blank"><img src="<?php echo ($plugin_file_url.'gmo-ads-master/images/'.'wpcloud_bnr_plugins.png'); ?>" alt="WordPress Plugins for Everyone"></a>
+<p>Browse our recommended plugin collection on GMO WP Cloud website.</p>
+<h3>Who We Are</h3>
+<a href="https://www.wpcloud.jp/en/?banner_id=plugins" target="_blank" class="logo"><img src="<?php echo ($plugin_file_url.'gmo-ads-master/images/'.'wpcloud_logo.png'); ?>" alt="WPCloud by GMO"></a>
+</div>
 </div><!-- #gmoplugRight -->
 
 </div><!-- #gmoadsmaster -->
